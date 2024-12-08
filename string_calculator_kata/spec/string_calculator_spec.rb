@@ -31,5 +31,9 @@ describe StringCalculator do
     it 'returns sum of two space seperated number' do
       expect(StringCalculator.add("1 5")).to eq(6)
     end
+
+    it 'thow an error when string contains invalid characters' do
+      expect { StringCalculator.add("1, 2, a, 3!") }.to raise_error(ArgumentError, "Invalid character found: a")
+    end
   end
 end
