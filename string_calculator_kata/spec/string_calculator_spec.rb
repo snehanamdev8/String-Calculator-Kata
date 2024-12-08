@@ -10,5 +10,9 @@ describe StringCalculator do
     it 'returns single number for single string number' do
       expect(StringCalculator.add("1")).to eq(1)
     end
+
+    it 'returns sum of two comma seperated number' do
+      expect(StringCalculator.add("1, 1")).to eq(2)
+    end
   end
 end
