@@ -27,5 +27,9 @@ describe StringCalculator do
       expect { StringCalculator.add("-1,2,-3") }.
         to raise_error(ArgumentError, "Negative numbers not allowed -1,-3")
     end
+
+    it 'returns sum of two space seperated number' do
+      expect(StringCalculator.add("1 5")).to eq(6)
+    end
   end
 end
