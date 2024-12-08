@@ -12,7 +12,11 @@ describe StringCalculator do
     end
 
     it 'returns sum of two comma seperated number' do
-      expect(StringCalculator.add("1, 1")).to eq(2)
+      expect(StringCalculator.add("1, 5")).to eq(6)
+    end
+
+    it 'handle new lines between numbers' do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
     end
   end
 end
